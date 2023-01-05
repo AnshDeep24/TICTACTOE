@@ -115,10 +115,10 @@ int main()
         gameover();
     }
     if(turn == 'X' && draw == false){
-        cout<<"\n\nCongratulations!Player with 'X' has won the game";
+        cout<<"\n\nCongratulations!Player with 'O' has won the game";
     }
     else if(turn == 'O' && draw == false){
-        cout<<"\n\nCongratulations!Player with 'O' has won the game";
+        cout<<"\n\nCongratulations!Player with 'X' has won the game";
     }
     else
     cout<<"\n\nGAME DRAW!!!\n\n";
