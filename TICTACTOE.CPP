@@ -18,26 +18,26 @@ void display_board(){
 
     //Rander Game Board LAYOUT
 
-    cout<<"PLAYER - 1 [X]t PLAYER - 2 [O]nn";
-    cout<<"tt     |     |     n";
-    cout<<"tt  "<<board[0][0]<<"  | "<<board[0][1]<<"  |  "<<board[0][2]<<" n";
-    cout<<"tt_____|_____|_____n";
-    cout<<"tt     |     |     n";
-    cout<<"tt  "<<board[1][0]<<"  | "<<board[1][1]<<"  |  "<<board[1][2]<<" n";
-    cout<<"tt_____|_____|_____n";
-    cout<<"tt     |     |     n";
-    cout<<"tt  "<<board[2][0]<<"  | "<<board[2][1]<<"  |  "<<board[2][2]<<" n";
-    cout<<"tt     |     |     n";
+    cout<<"PLAYER - 1 [X]\t PLAYER - 2 [O]\n\n";
+    cout<<"\t\t     |     |     \n";
+    cout<<"\t\t  "<<board[0][0]<<"  | "<<board[0][1]<<"   |   "<<board[0][2]<<" \n";
+    cout<<"\t\t_____|_____|_____\n";
+    cout<<"\t\t     |     |     \n";
+    cout<<"\t\t  "<<board[1][0]<<"  | "<<board[1][1]<<"   |   "<<board[1][2]<<" \n";
+    cout<<"\t\t_____|_____|_____\n";
+    cout<<"\t\t     |     |     \n";
+    cout<<"\t\t  "<<board[2][0]<<"  | "<<board[2][1]<<"   |   "<<board[2][2]<<" \n";
+    cout<<"\t\t     |     |     \n";
 }
 
 //Function to get the player input and update the board
 
 void player_turn(){
     if(turn == 'X'){
-        cout<<"ntPlayer - 1 [X] turn : ";
+        cout<<"\n\tPlayer - 1 [X] turn : ";
     }
     else if(turn == 'O'){
-        cout<<"ntPlayer - 2 [O] turn : ";
+        cout<<"\n\tPlayer - 2 [O] turn : ";
     }
     //Taking input from user
     //updating the board according to choice and reassigning the turn Start
@@ -72,7 +72,7 @@ void player_turn(){
         turn = 'X';
     }else {
         //if input position already filled
-        cout<<"Box already filled!n Please choose another!!nn";
+        cout<<"Box already filled!n Please choose another!!\n\n";
         player_turn();
     }
     /* Ends */
@@ -107,19 +107,19 @@ bool gameover(){
 
 int main()
 {
-    cout<<"tttT I C K -- T A C -- T O E -- G A M Ettt";
-    cout<<"nttttFOR 2 PLAYERSnttt";
+    cout<<"\n\n\t\t\tT I C K -- T A C -- T O E -- G A M E\t\t\t";
+    cout<<"\n\n\t\t\t\tFOR 2 PLAYERS\n\t\t\t";
     while(gameover()){
         display_board();
         player_turn();
         gameover();
     }
     if(turn == 'X' && draw == false){
-        cout<<"nnCongratulations!Player with 'X' has won the game";
+        cout<<"\n\nCongratulations!Player with 'X' has won the game";
     }
     else if(turn == 'O' && draw == false){
-        cout<<"nnCongratulations!Player with 'O' has won the game";
+        cout<<"\n\nCongratulations!Player with 'O' has won the game";
     }
     else
-    cout<<"nnGAME DRAW!!!nn";
+    cout<<"\n\nGAME DRAW!!!\n\n";
 } 
